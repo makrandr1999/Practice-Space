@@ -1,0 +1,39 @@
+//For an equal subsequence to be present, there needs to be atleast two instances of
+//a letter. This program checks the frequency of the letters and then stores the
+//frequency of every letter in an int array 'freq'. When a letter has occured atleast
+//twice, then a subsequence is possible
+//Note: It is not possible to find out the position of the subsequence using this program
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int t;
+    string s,alpha="abcdefghijklmnopqrstuvwxyz";
+    cin>>t;
+    for(int i=0;i<t;i++){
+        cin>>s;
+        int freq[26]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        for(int j = 0;j<s.size();j++){  
+            for(int k = 0; k <26;k++){
+                if(s[j] == alpha[k]){
+                    freq[k]++;
+                }
+            }
+        }
+        bool ans = 0;
+        for(int l = 0;l<26;l++){
+            if(freq[l]>1){
+                ans = 1;
+            }
+        }
+        
+        if(ans == 1){
+            cout<<"yes"<<endl;
+        }else{
+            cout<<"no"<<endl;
+        }
+        
+    }
+    return 0;
+}
