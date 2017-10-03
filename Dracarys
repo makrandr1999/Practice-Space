@@ -1,0 +1,70 @@
+Nishchith is very fond of Game of Thrones and he is fascinated by their fictional language of dothraki. From Childhood, he always wanted to have a secret language of his own which he would use with friends that only their group would understand. Remembering his dream, Nishchith decided to make his own language.
+
+Nishchith started to make his own language by modifying the english language itself. He is replacing the letters in english language to obtain a new language i.e Initially, If Nishchith decided that 'a' is to be replaced by 'v' then all words in his language will have 'v' instead of 'a'. 
+
+Example for this case: valley(english) , vvlley(Nishchith's language).He is also checking some english words in his own new language from time to time to check how his language is sounding.
+ 
+Input
+First line would consist of a number 'q' representing number of queries. Next q lines would all contain queries.
+There would be two types of query:
+Query 1 : this type of query would have a number 1 followed by a number 'n' and a character 'c'. 1 would denote the type of query , The number 'n' will represent the nth alphabet in Nishchith's language which has to be changed to character 'c' now.
+Query 2: this type of query would have a number 2 denoting the type of query followed by a string 's' representing the world in english language that has to be translated to Nishchith's language.
+ 
+Output
+For each type 2 query , print the given word in Nishchith's language.
+ 
+Constraints
+1 ≤ q ≤ 104
+1 ≤ |s| ≤ 100, where |S| denotes the length of S
+ 
+Example 1
+Input:
+2
+1 1 v
+2 valley
+
+Output:
+vvlley
+ 
+Example 2
+Input:
+4
+1 1 a
+2 pikachu
+1 3 d
+2 codebed
+
+Output:
+pikachu
+dodebed
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int cases,query,n,len;
+string alphabet="abcdefghijklmnopqrstuvwxyz",sentence;
+char c;
+
+int main() {
+	cin>>cases;
+	for(int i=0;i<cases;i++){
+	    cin>>query;
+	    if(query==1){
+	        cin>>n;
+	        cin>>c;
+	        }else{
+	        getline(cin,sentence);
+	        len = sentence.size();
+	        for(int j=0;j<len;j++){
+	        if(sentence[j] == alphabet[n-1])
+          {
+          sentence[j] = c;
+          }
+          }
+	        cout<<sentence<<endl;
+	        }
+	       }
+	return 0;
+}
