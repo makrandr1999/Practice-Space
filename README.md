@@ -1,5 +1,5 @@
-# ICPC2017-18-Practice
-## Library of solved practice problems for ACM-ICPC 2017-18 (Online Round).  
+# Practice-Space
+## Library of solved practice problems.  
 Purpose:  
   * To brush up competitive coding skills.
   
