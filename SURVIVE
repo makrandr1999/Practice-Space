@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int n,k,s,days=0,weeks,remaining;
+        scanf("%d%d%d",&n,&k,&s);
+        weeks=s/7;
+        if((k*s)>((s-weeks)*n))
+        {
+            printf("-1\n");
+        }
+        else
+        {
+           days=(k*s)/n;
+           remaining=(k*s)%n;
+           if(remaining>0)
+                days+=1;
+           printf("%d\n",days);
+        }
+    }
+ 
+}
