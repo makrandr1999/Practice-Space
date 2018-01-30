@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ int a,b,c,k,i;
+ k=10;
+ a=0;
+    b=a+1;
+    cout << "0 1 ";
+  for(i=2;i<k;i++)
+  {
+    c=a+b;
+    cout<<c << " ";
+    a=b;
+    b=c;
+  }
+return(0);
+}
+    
+ 
+
+ 
+ 
+ 
+ 
