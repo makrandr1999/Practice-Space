@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(void)
+{
+    int n, s = 1, a, b, r;
+    printf ("Enter number of points : ");
+    scanf ("%d", &n);
+    a = (n * (n - 1)) / 2;
+    for ( int i = 0; i < 4; i++)
+    {
+        s = s * (n - i);
+    }
+    b = s / 24;
+    r = a + b + 1;
+    printf ("Number of regions are %d\n", r);
+}
