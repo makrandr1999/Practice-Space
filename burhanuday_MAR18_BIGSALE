@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	
+	while(t--){
+	    int n;
+	    cin>>n;
+	    
+	    double totalLoss=0;
+	    vector<double> losses;
+	    
+	    while(n--){
+	        double p,q,d,ai,sp,loss;
+	        cin>>p>>q>>d;
+	        int ptr;
+	        
+	        ai = p + (d/100 * p);
+	        sp = ai - (d/100 *ai);
+	        loss = p - sp;
+	        loss = loss*q;
+	        losses.push_back(loss);
+	    }
+	    
+	    for(int i=0; i<losses.size(); i++){
+	        totalLoss = totalLoss + losses[i];
+	    }
+	    cout.precision(19);
+	    cout<<totalLoss<<endl;
+	    
+	}
+	return 0;
+}
