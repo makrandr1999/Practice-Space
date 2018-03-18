@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int t;
+	cin>>t;
+	
+	while(t--){
+	    int n,front=1,back=1;
+	    cin>>n;
+	    
+	    int f[n], l[n];
+	    
+	    //lengths of fingers
+	    for(int i=0; i<n; i++){
+	        cin>>f[i];
+	    }
+	    
+	    
+	    //lengths of gloves
+	    for(int i=0; i<n; i++){
+	        cin>>l[i];
+	    }
+	    
+	    
+	    //checking front
+	    for(int i=0; i<n; i++){
+	        if(f[i] > l[i]){
+	            front=0;
+	        }
+	    }
+	    
+	    for(int i=n-1; i>=0; i--){
+	        if(f[i] > l[n-1-i]){
+	            back=0;
+	        }
+	    }
+	    
+	    if(front==1 && back == 1){
+	        cout<<"both"<<endl;
+	    }else if(front == 1){
+	        cout<<"front"<<endl;
+	    }else if(back == 1){
+	        cout<<"back"<<endl;
+	    }else{
+	        cout<<"none"<<endl;
+	    }
+	    
+	}
+	
+	return 0;
+}
