@@ -7,9 +7,9 @@ class CHEGLOVE
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner sc = new Scanner(System.in);
-		int t = sc. nextInt();
+		int test = sc. nextInt();
 		int i,j;
-		while(t-- > 0)
+		while(test-- > 0)
 		{
 			int n = sc. nextInt();
 			int[] finger = new int[n];
@@ -17,7 +17,7 @@ class CHEGLOVE
 			boolean front = false;
 			boolean back = false;
 			boolean both = false;
-			//take input
+			
 			for( i = 0; i < n; i++)
 			{
 				finger[i] = sc.nextInt();
@@ -26,7 +26,7 @@ class CHEGLOVE
 			{
 				sheath[i] = sc.nextInt();
 			}
-			//main logic
+			
 			for( i = 0; i < n; i++)
 			{
 				if(finger[i] <= sheath[i])
