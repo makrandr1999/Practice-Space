@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 class ORDERS{
 	public static void main(String[] args) {
